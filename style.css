@@ -1,0 +1,763 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --dark: #2c3639;
+  --dark-green: #3f4e4f;
+  --green: #445d48;
+  --orange: #a27b5c;
+  --light: #dcd7c9;
+  --brown: #776b5d;
+  --grey: #474747;
+  --light-grey: #9c9ca1;
+}
+
+/* Keseluruhan */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--light);
+}
+
+/* Header Section */
+header {
+  padding: 18px 20px;
+  background-color: var(--dark);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 400px;
+}
+
+.container .logo {
+  color: var(--light);
+  display: flex;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.container .navbar {
+  display: flex;
+  gap: 18px;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 15px;
+  color: var(--light);
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+  color: var(--orange);
+}
+/* End of Header Section */
+
+/* Hero Section */
+.hero {
+  background-color: var(--light);
+  padding: 100px 20px 20px 20px;
+  margin-top: 35px;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 240px;
+}
+
+.container .introduction h3 {
+  color: var(--brown);
+}
+
+.container .introduction span {
+  color: var(--dark);
+}
+
+.container .introduction h2 {
+  color: var(--green);
+  font-size: 35px;
+  line-height: 2;
+}
+
+.container .introduction p {
+  color: #303030;
+  animation: fadeInUp 1.5s infinite alternate;
+}
+
+.contact-me {
+  border: var(--dark-green) solid 3px;
+  border-radius: 10px;
+  background-color: var(--dark-green);
+  margin-top: 30px;
+  padding: 10px 15px;
+  text-align: center;
+  width: max-content;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-me i {
+  color: var(--light);
+}
+
+.contact-me a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--light);
+  margin-left: 8px;
+  transition: all 0.1s ease-in-out;
+}
+
+.contact-me:hover,
+.contact-me:hover i,
+.contact-me:hover a {
+  cursor: pointer;
+  background: transparent;
+  color: var(--dark-green);
+}
+
+.contact-me:active {
+  transform: scale(0.95);
+}
+
+.container .photo img {
+  animation: breathe 1s infinite alternate;
+}
+/* End of Hero Section */
+
+/* About Section */
+.about {
+  background-color: var(--light);
+  padding: 100px 40px 30px 40px;
+  text-align: justify;
+}
+
+.about .container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.about .container h4 {
+  color: var(--brown);
+}
+
+.about .container h2 {
+  color: var(--green);
+}
+
+.container .tentang-saya {
+  width: 430px;
+}
+
+.tentang-saya h2,
+.berteman h2 {
+  margin: 10px 0;
+}
+
+.container .berteman {
+  width: 430px;
+}
+
+.berteman .social-media {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.social-media a {
+  color: var(--dark);
+  transition: 0.1s;
+}
+
+.social-media a:hover {
+  transform: scale(1.2);
+}
+
+.social-media a:active {
+  transform: scale(1.1);
+}
+/* End of About Section */
+
+/* Portofolio Section */
+.portofolio {
+  padding: 100px 0px 50px 0;
+  margin-top: 40px;
+  background-color: #b0a695;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.portofolio .container {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container .title {
+  max-width: 576px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.title h4 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.title h2 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 16px;
+  color: var(--dark-green);
+}
+
+.title p {
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.container .content {
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content .gallery {
+  margin-bottom: 64px;
+  padding: 16px;
+}
+
+.gallery .border {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  display: flex;
+}
+
+.border img {
+  width: 100%;
+  align-items: center;
+}
+
+.gallery h3 {
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.gallery p {
+  color: var(--grey);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+/* End of Portofolio Section */
+
+/* Contact Section */
+.contact {
+  padding: 100px 0px 50px 0;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact .container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .form-contact {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-contact label {
+  font-weight: 600;
+  color: var(--dark-green);
+}
+
+.form-contact .nama,
+.form-contact .email,
+.form-contact .message {
+  font-size: 16px;
+  line-height: 36px;
+}
+
+.form-contact #name,
+.form-contact #email,
+.form-contact #message {
+  width: 100%;
+  background-color: #dbdfea;
+  color: var(--dark);
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.form-contact #name:focus,
+.form-contact #email:focus,
+.form-contact #message:focus {
+  outline: var(--brown) solid 2px;
+}
+
+form .submit {
+  width: 100%;
+  padding: 0 16px;
+}
+
+form .submit button {
+  font-weight: 600;
+  width: 100%;
+  font-size: 18px;
+  line-height: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 20px;
+  border: none;
+  color: var(--light);
+  background-color: var(--green);
+  transition: 0.1s ease-in-out;
+}
+
+form .submit button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+form .submit button:active {
+  transform: scale(0.96);
+}
+
+/* End of Contact Section */
+
+/* Footer Section */
+footer {
+  background-color: var(--dark);
+  padding: 96px 70px 48px 70px;
+}
+
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .address {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 48px;
+  width: 40%;
+}
+
+.address h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  color: var(--light);
+}
+
+.address h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 8px;
+  color: #c7c8cc;
+}
+
+.address p {
+  font-weight: 500;
+  color: var(--light-grey);
+}
+
+.kategori,
+.tautan {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 48px;
+  list-style: none;
+  width: 20%;
+}
+
+.kategori h3,
+.tautan h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 20px;
+  color: #c7c8cc;
+}
+
+.kategori a,
+.tautan a {
+  font-weight: 500;
+  color: var(--light-grey);
+  margin-bottom: 12px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.kategori a:hover,
+.tautan a:hover {
+  color: var(--orange);
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.information .social-media {
+  display: flex;
+  gap: 20px;
+}
+
+.information .social-media a {
+  margin: 20px 0;
+  color: var(--light);
+  transition: 0.1s;
+}
+
+.information .social-media a:hover {
+  transform: scale(1.2);
+}
+
+.information .social-media a:active {
+  transform: scale(1.1);
+}
+
+.information .copyright p {
+  font-weight: 500;
+  color: var(--light-grey);
+}
+
+.information .copyright span {
+  font-weight: 700;
+  color: var(--orange);
+}
+
+/* End of Footer Section */
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive */
+
+/* Extra Large */
+@media (max-width: 1280px) {
+  header .container {
+    gap: 300px;
+  }
+
+  .hero .container {
+    gap: 140px;
+  }
+
+  .container .tentang-saya,
+  .container .berteman {
+    width: 380px;
+  }
+
+  .about .container h2 {
+    text-align: left;
+    font-size: 29px;
+  }
+
+  .container .content {
+    width: 85%;
+  }
+
+  .contact .container {
+    width: 70%;
+  }
+}
+
+/* Large */
+@media (max-width: 1024px) {
+  header .container {
+    gap: 250px;
+  }
+
+  .hero .container {
+    gap: 90px;
+  }
+
+  .container .tentang-saya,
+  .container .berteman {
+    width: 350px;
+  }
+
+  .about .container h2 {
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .container .content {
+    width: 80%;
+  }
+
+  .contact .container {
+    width: 60%;
+  }
+
+  .address h2 {
+    font-size: 30px;
+  }
+
+  .address h3 {
+    font-size: 20px;
+  }
+}
+
+/* Medium */
+@media (max-width: 768px) {
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .container .logo {
+    display: flex;
+    align-items: center;
+    gap: 55vw;
+  }
+
+  .container .navbar {
+    position: absolute;
+    top: 72px;
+    right: 0;
+    background-color: rgba(44, 54, 57, 0.6);
+    width: 12rem;
+    height: 0;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    transition: 0.3s;
+  }
+
+  .navbar a {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .navbar a:hover {
+    color: black;
+  }
+
+  header .navbar.active {
+    height: 16rem;
+  }
+
+  .hero .container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 70px;
+    row-gap: 50px;
+  }
+
+  .about .container {
+    margin-left: 70px;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 50px;
+  }
+
+  .container .title {
+    max-width: 532px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .about .container {
+    width: fit-content;
+  }
+
+  .title h2 {
+    font-size: 25px;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+
+  .address h2 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 640px) {
+  header {
+    padding: 18px 0;
+    height: 36px;
+  }
+
+  .container .logo {
+    margin-top: 10px;
+    justify-content: center;
+    font-size: small;
+  }
+
+  .container .logo h1 {
+    font-size: larger;
+  }
+
+  .container .navbar {
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .hero {
+    width: auto;
+    margin-top: 25px;
+  }
+
+  .hero .container {
+    width: auto;
+    margin-left: 0;
+  }
+
+  .hero .container h2 {
+    font-size: 25px;
+  }
+
+  .hero .container p {
+    font-size: 14px;
+  }
+
+  .hero .container img {
+    width: 250px;
+  }
+
+  .about {
+    padding-left: 20px;
+    width: auto;
+  }
+
+  .about .container {
+    margin-left: 0;
+  }
+
+  .container .tentang-saya,
+  .container .berteman {
+    width: auto;
+  }
+
+  .about .tentang-saya h2,
+  .about .berteman h2 {
+    font-size: larger;
+  }
+
+  .tentang-saya p,
+  .berteman p {
+    font-size: smaller;
+  }
+
+  .portofolio p {
+    font-size: 85%;
+  }
+
+  .portofolio .container .title {
+    width: 80%;
+  }
+
+  .contact .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .form-contact {
+    justify-content: flex-start;
+  }
+
+  footer {
+    padding: 30px 20px;
+  }
+
+  .container .address {
+    width: 80%;
+  }
+
+  .container .kategori,
+  .container .tautan {
+    width: 80%;
+  }
+
+  footer .container h2 {
+    font-size: 20px;
+  }
+
+  footer .container p,
+  li {
+    font-size: 90%;
+  }
+
+  footer .copyright {
+    font-size: smaller;
+  }
+}
